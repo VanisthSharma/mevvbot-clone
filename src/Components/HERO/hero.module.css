@@ -1,0 +1,122 @@
+@import url('https://api.fontshare.com/v2/css?f[]=chillax@300&display=swap');
+.gradientText{
+    background: linear-gradient(90deg, #57FFFF 1.39%, #E777FF 33.23%, #FFD89E 66.1%, #59F3FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Chillax', sans-serif;
+    font-size: 4rem;
+    &::before{
+        top: 0;
+        right:0;
+        position: absolute;
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+        background-color: #181921;
+    }
+}
+.connectBTN {
+    background: linear-gradient(#1F1C35, #1F1C35) padding-box,
+        linear-gradient(90deg, #57FFFF 1.39%, #E777FF 33.23%, #FFD89E 66.1%, #59F3FF 100%) border-box;
+    border-radius: 50em;
+    border: 2px solid transparent;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 320px;
+    padding: 15px 40px;
+    height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    background-size: 200% 200%;
+    animation: gradient 2s linear infinite;
+    cursor: pointer;
+    &:hover{
+        animation: none;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: lightgray;
+  border-radius: 4px;
+  margin-right: .4rem;
+  cursor: pointer;
+}
+
+.custom-checkbox:checked {
+  background-color: #6a60e8;
+  position: relative;
+}
+
+@media screen and (max-width: 580px) {
+    .resp{
+        top:85rem;
+    }
+    .bigT,.gradientText{
+        font-size: 2rem;
+    }
+}
+
+.custom-checkbox:checked::before {
+  content: '';
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/check.svg');
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.smallGradientText{
+    background: linear-gradient(90deg, #57FFFF 1.39%, #E777FF 33.23%, #FFD89E 66.1%, #59F3FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bigT{
+    font-size: 4rem;
+}
+.bigShort{
+    animation:bs 3s infinite ease-in-out ;
+}
+@keyframes bs {
+    0%{
+        height: 52px;
+        width: 52px;
+    }
+    50%{
+        height: 68px;
+        width: 68px;
+    }
+    100%{
+        height: 52px;
+        width: 52px;
+    }
+}
+.textShort{
+    font-size: 56px;
+}
